@@ -6,14 +6,16 @@ services:
       dockerfile: Dockerfile-structured
     networks:
       - wikiflow-network
+    ports:
+      - "4040:4040"
     deploy:
       resources:
         limits:
           cpus: '1'
-          memory: 8000M
+          memory: 512M
         reservations:
           cpus: '1'
-          memory: 8000M
+          memory: 512M
 networks:
   wikiflow-network:
     external:
